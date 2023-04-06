@@ -1,12 +1,12 @@
 {
-  "$id": "kyruusLocations",
+  "$id": "kyruusLocations_Connector",
   "$schema": "https://schema.yext.com/config/km/connector/v3",
   "displayName": "Kyruus Locations",
   "entityType": "healthcareFacility",
   "source": {
     "sourceConfig": {
       "functionConfig": {
-        "plugin": "kyruusSource",
+        "plugin": "kyruusLocations",
         "function": "fetchLocations",
         "dataFormat": "JSON"
       }
