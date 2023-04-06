@@ -1,0 +1,9 @@
+{
+  "$id": "kyruusSource",
+  "$schema": "https://schema.yext.com/config/platform/plugin/v1",
+  "globals": {
+    "clientId": "sclhealth_yext_google_my_business",
+    "clientSecret": "c55a31e568c24e1eadbf5560226b88c6",
+    "customer": "sclhealth"
+  }
+}
