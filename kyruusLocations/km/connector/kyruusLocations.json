@@ -6,7 +6,7 @@
   "source": {
     "sourceConfig": {
       "functionConfig": {
-        "plugin": "kyruusSource",
+        "plugin": "kyruusLocations",
         "function": "fetchLocations",
         "dataFormat": "JSON"
       }
