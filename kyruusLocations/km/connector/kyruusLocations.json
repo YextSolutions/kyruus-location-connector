@@ -1,0 +1,929 @@
+{
+  "$id": "kyruusLocations",
+  "$schema": "https://schema.yext.com/config/km/connector/v3",
+  "displayName": "Kyruus Locations",
+  "entityType": "healthcareFacility",
+  "source": {
+    "sourceConfig": {
+      "functionConfig": {
+        "plugin": "kyruusSource",
+        "function": "fetchLocations",
+        "dataFormat": "JSON"
+      }
+    },
+    "baseSelector": {
+      "type": "JSON",
+      "header": "Entity Container",
+      "path": "_locations"
+    },
+    "selectors": [
+      {
+        "type": "JSON",
+        "header": "accepting_new_patients",
+        "path": "accepting_new_patients"
+      },
+      {
+        "type": "JSON",
+        "header": "address.city",
+        "path": "address.city"
+      },
+      {
+        "type": "JSON",
+        "header": "address.coordinates.lat",
+        "path": "address.coordinates.lat"
+      },
+      {
+        "type": "JSON",
+        "header": "address.coordinates.lon",
+        "path": "address.coordinates.lon"
+      },
+      {
+        "type": "JSON",
+        "header": "address.country",
+        "path": "address.country"
+      },
+      {
+        "type": "JSON",
+        "header": "address.state",
+        "path": "address.state"
+      },
+      {
+        "type": "JSON",
+        "header": "address.street1",
+        "path": "address.street1"
+      },
+      {
+        "type": "JSON",
+        "header": "address.suite",
+        "path": "address.suite"
+      },
+      {
+        "type": "JSON",
+        "header": "address.zip",
+        "path": "address.zip"
+      },
+      {
+        "type": "JSON",
+        "header": "contacts[].contact_type",
+        "path": "contacts[].contact_type"
+      },
+      {
+        "type": "JSON",
+        "header": "contacts[].label",
+        "path": "contacts[].label"
+      },
+      {
+        "type": "JSON",
+        "header": "contacts[].primary",
+        "path": "contacts[].primary"
+      },
+      {
+        "type": "JSON",
+        "header": "contacts[].value",
+        "path": "contacts[].value"
+      },
+      {
+        "type": "JSON",
+        "header": "custom.HIM_business_analyst_name",
+        "path": "custom.HIM_business_analyst_name"
+      },
+      {
+        "type": "JSON",
+        "header": "custom.HIM_business_analyst_phone",
+        "path": "custom.HIM_business_analyst_phone"
+      },
+      {
+        "type": "JSON",
+        "header": "custom.ambulatory_informatics_name",
+        "path": "custom.ambulatory_informatics_name"
+      },
+      {
+        "type": "JSON",
+        "header": "custom.ambulatory_informatics_phone",
+        "path": "custom.ambulatory_informatics_phone"
+      },
+      {
+        "type": "JSON",
+        "header": "custom.business_coordinator_name",
+        "path": "custom.business_coordinator_name"
+      },
+      {
+        "type": "JSON",
+        "header": "custom.clinic_AU",
+        "path": "custom.clinic_AU"
+      },
+      {
+        "type": "JSON",
+        "header": "custom.director_exec_director_name",
+        "path": "custom.director_exec_director_name"
+      },
+      {
+        "type": "JSON",
+        "header": "custom.practice_administrator_name",
+        "path": "custom.practice_administrator_name"
+      },
+      {
+        "type": "JSON",
+        "header": "custom.practice_clinic_manager_name",
+        "path": "custom.practice_clinic_manager_name"
+      },
+      {
+        "type": "JSON",
+        "header": "custom.practice_epic_name",
+        "path": "custom.practice_epic_name"
+      },
+      {
+        "type": "JSON",
+        "header": "custom.practice_notes",
+        "path": "custom.practice_notes"
+      },
+      {
+        "type": "JSON",
+        "header": "customer",
+        "path": "customer"
+      },
+      {
+        "type": "JSON",
+        "header": "hours_of_operation.notes",
+        "path": "hours_of_operation.notes"
+      },
+      {
+        "type": "JSON",
+        "header": "hours_of_operation.periods[].closeDay",
+        "path": "hours_of_operation.periods[].closeDay"
+      },
+      {
+        "type": "JSON",
+        "header": "hours_of_operation.periods[].closeTime",
+        "path": "hours_of_operation.periods[].closeTime"
+      },
+      {
+        "type": "JSON",
+        "header": "hours_of_operation.periods[].openDay",
+        "path": "hours_of_operation.periods[].openDay"
+      },
+      {
+        "type": "JSON",
+        "header": "hours_of_operation.periods[].openTime",
+        "path": "hours_of_operation.periods[].openTime"
+      },
+      {
+        "type": "JSON",
+        "header": "id",
+        "path": "id"
+      },
+      {
+        "type": "JSON",
+        "header": "is_permanently_closed",
+        "path": "is_permanently_closed"
+      },
+      {
+        "type": "JSON",
+        "header": "location_type.is_global",
+        "path": "location_type.is_global"
+      },
+      {
+        "type": "JSON",
+        "header": "location_type.name",
+        "path": "location_type.name"
+      },
+      {
+        "type": "JSON",
+        "header": "metadata.created",
+        "path": "metadata.created"
+      },
+      {
+        "type": "JSON",
+        "header": "metadata.last_modified",
+        "path": "metadata.last_modified"
+      },
+      {
+        "type": "JSON",
+        "header": "metadata.last_updated",
+        "path": "metadata.last_updated"
+      },
+      {
+        "type": "JSON",
+        "header": "name",
+        "path": "name"
+      },
+      {
+        "type": "JSON",
+        "header": "publish_local_listing",
+        "path": "publish_local_listing"
+      },
+      {
+        "type": "JSON",
+        "header": "region.is_global",
+        "path": "region.is_global"
+      },
+      {
+        "type": "JSON",
+        "header": "region.name",
+        "path": "region.name"
+      },
+      {
+        "type": "JSON",
+        "header": "services[].is_global",
+        "path": "services[].is_global"
+      },
+      {
+        "type": "JSON",
+        "header": "services[].name",
+        "path": "services[].name"
+      },
+      {
+        "type": "JSON",
+        "header": "services[].aliases",
+        "path": "services[].aliases"
+      },
+      {
+        "type": "JSON",
+        "header": "specialties[].aliases[].name",
+        "path": "specialties[].aliases[].name"
+      },
+      {
+        "type": "JSON",
+        "header": "specialties[].aliases[].aui",
+        "path": "specialties[].aliases[].aui"
+      },
+      {
+        "type": "JSON",
+        "header": "specialties[].eui",
+        "path": "specialties[].eui"
+      },
+      {
+        "type": "JSON",
+        "header": "specialties[].specialty",
+        "path": "specialties[].specialty"
+      },
+      {
+        "type": "JSON",
+        "header": "urls[].primary",
+        "path": "urls[].primary"
+      },
+      {
+        "type": "JSON",
+        "header": "urls[].value",
+        "path": "urls[].value"
+      },
+      {
+        "type": "JSON",
+        "header": "custom.additional_contact_1_name_title_phone_number",
+        "path": "custom.additional_contact_1_name_title_phone_number"
+      },
+      {
+        "type": "JSON",
+        "header": "custom.additional_contact_2_name_title_phone_number",
+        "path": "custom.additional_contact_2_name_title_phone_number"
+      },
+      {
+        "type": "JSON",
+        "header": "custom.additional_contact_3_name_title_phone_number",
+        "path": "custom.additional_contact_3_name_title_phone_number"
+      },
+      {
+        "type": "JSON",
+        "header": "exterior_signage_name",
+        "path": "exterior_signage_name"
+      },
+      {
+        "type": "JSON",
+        "header": "urls[].label",
+        "path": "urls[].label"
+      },
+      {
+        "type": "JSON",
+        "header": "custom.google_name",
+        "path": "custom.google_name"
+      },
+      {
+        "type": "JSON",
+        "header": "external_ids[].id",
+        "path": "external_ids[].id"
+      },
+      {
+        "type": "JSON",
+        "header": "external_ids[].system",
+        "path": "external_ids[].system"
+      },
+      {
+        "type": "JSON",
+        "header": "location_type.aliases",
+        "path": "location_type.aliases"
+      },
+      {
+        "type": "JSON",
+        "header": "insurance_accepted[].name",
+        "path": "insurance_accepted[].name"
+      },
+      {
+        "type": "JSON",
+        "header": "Monday Close Time",
+        "path": "hours_of_operation.periods[?closeDay\u003d\u003d\u0027Monday\u0027].closeTime"
+      },
+      {
+        "type": "JSON",
+        "header": "Tuesday Close Time",
+        "path": "hours_of_operation.periods[?closeDay\u003d\u003d\u0027Tuesday\u0027].closeTime"
+      },
+      {
+        "type": "JSON",
+        "header": "Wednesday Close Time",
+        "path": "hours_of_operation.periods[?closeDay\u003d\u003d\u0027Wednesday\u0027].closeTime"
+      },
+      {
+        "type": "JSON",
+        "header": "Thursday Close Time",
+        "path": "hours_of_operation.periods[?closeDay\u003d\u003d\u0027Thursday\u0027].closeTime"
+      },
+      {
+        "type": "JSON",
+        "header": "Friday Close Time",
+        "path": "hours_of_operation.periods[?closeDay\u003d\u003d\u0027Friday\u0027].closeTime"
+      },
+      {
+        "type": "JSON",
+        "header": "Saturday Close Time",
+        "path": "hours_of_operation.periods[?closeDay\u003d\u003d\u0027Saturday\u0027].closeTime"
+      },
+      {
+        "type": "JSON",
+        "header": "Sunday Close Time",
+        "path": "hours_of_operation.periods[?closeDay\u003d\u003d\u0027Sunday\u0027].closeTime"
+      },
+      {
+        "type": "JSON",
+        "header": "Monday Open Time",
+        "path": "hours_of_operation.periods[?openDay\u003d\u003d\u0027Monday\u0027].openTime"
+      },
+      {
+        "type": "JSON",
+        "header": "Tuesday Open Time",
+        "path": "hours_of_operation.periods[?openDay\u003d\u003d\u0027Tuesday\u0027].openTime"
+      },
+      {
+        "type": "JSON",
+        "header": "Wednesday Open Time",
+        "path": "hours_of_operation.periods[?openDay\u003d\u003d\u0027Wednesday\u0027].openTime"
+      },
+      {
+        "type": "JSON",
+        "header": "Thursday Open Time",
+        "path": "hours_of_operation.periods[?openDay\u003d\u003d\u0027Thursday\u0027].openTime"
+      },
+      {
+        "type": "JSON",
+        "header": "Friday Open Time",
+        "path": "hours_of_operation.periods[?openDay\u003d\u003d\u0027Friday\u0027].openTime"
+      },
+      {
+        "type": "JSON",
+        "header": "Saturday Open Time",
+        "path": "hours_of_operation.periods[?openDay\u003d\u003d\u0027Saturday\u0027].openTime"
+      },
+      {
+        "type": "JSON",
+        "header": "Sunday Open Time",
+        "path": "hours_of_operation.periods[?openDay\u003d\u003d\u0027Sunday\u0027].openTime"
+      },
+      {
+        "type": "JSON",
+        "header": "Monday isClosed",
+        "path": "hours_of_operation.periods[?openDay\u003d\u003d\u0027Monday\u0027].openTime"
+      },
+      {
+        "type": "JSON",
+        "header": "Tuesday isClosed",
+        "path": "hours_of_operation.periods[?openDay\u003d\u003d\u0027Tuesday\u0027].openTime"
+      },
+      {
+        "type": "JSON",
+        "header": "Wednesday isClosed",
+        "path": "hours_of_operation.periods[?openDay\u003d\u003d\u0027Wednesday\u0027].openTime"
+      },
+      {
+        "type": "JSON",
+        "header": "Thursday isClosed",
+        "path": "hours_of_operation.periods[?openDay\u003d\u003d\u0027Thursday\u0027].openTime"
+      },
+      {
+        "type": "JSON",
+        "header": "Friday isClosed",
+        "path": "hours_of_operation.periods[?openDay\u003d\u003d\u0027Friday\u0027].openTime"
+      },
+      {
+        "type": "JSON",
+        "header": "Saturday isClosed",
+        "path": "hours_of_operation.periods[?openDay\u003d\u003d\u0027Saturday\u0027].openTime"
+      },
+      {
+        "type": "JSON",
+        "header": "Sunday isClosed",
+        "path": "hours_of_operation.periods[?openDay\u003d\u003d\u0027Sunday\u0027].openTime"
+      }
+    ]
+  },
+  "transforms": [
+    {
+      "formatTimes": {
+        "inputHeaders": {
+          "headers": [
+            "Monday Close Time",
+            "Tuesday Close Time",
+            "Wednesday Close Time",
+            "Thursday Close Time",
+            "Friday Close Time",
+            "Saturday Close Time",
+            "Sunday Close Time",
+            "Monday Open Time",
+            "Tuesday Open Time",
+            "Wednesday Open Time",
+            "Thursday Open Time",
+            "Friday Open Time",
+            "Saturday Open Time",
+            "Sunday Open Time"
+          ]
+        },
+        "inputFormat": "HH:mm"
+      }
+    },
+    {
+      "splitColumn": {
+        "inputHeader": "contacts[].value",
+        "newColumnHeaders": [
+          "Phone",
+          "Other"
+        ],
+        "delimiter": ","
+      }
+    },
+    {
+      "fillInEmptyCells": {
+        "inputHeaders": {
+          "headers": [
+            "Monday isClosed",
+            "Tuesday isClosed",
+            "Wednesday isClosed",
+            "Thursday isClosed",
+            "Friday isClosed",
+            "Saturday isClosed",
+            "Sunday isClosed"
+          ]
+        },
+        "value": "true"
+      }
+    },
+    {
+      "findAndReplace": {
+        "inputHeaders": {
+          "headers": [
+            "Monday isClosed",
+            "Tuesday isClosed",
+            "Wednesday isClosed",
+            "Thursday isClosed",
+            "Friday isClosed",
+            "Saturday isClosed",
+            "Sunday isClosed"
+          ]
+        },
+        "valueToFind": {
+          "regex": "\\d\\d:\\d\\d"
+        },
+        "replacement": "false"
+      }
+    },
+    {
+      "function": {
+        "inputHeaders": {
+          "headers": [
+            "location_type.name"
+          ]
+        },
+        "plugin": "kyruusLocations_locationCategory",
+        "function": "locationCategory"
+      }
+    }
+  ],
+  "mappings": [
+    {
+      "header": "Thursday Open Time",
+      "field": "hours",
+      "subfieldPath": [
+        {
+          "name": "thursday"
+        },
+        {
+          "name": "openIntervals"
+        },
+        {
+          "name": "start"
+        }
+      ],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "Saturday Close Time",
+      "field": "hours",
+      "subfieldPath": [
+        {
+          "name": "saturday"
+        },
+        {
+          "name": "openIntervals"
+        },
+        {
+          "name": "end"
+        }
+      ],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "address.street1",
+      "field": "address",
+      "subfieldPath": [
+        {
+          "name": "line1"
+        }
+      ],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "Tuesday Open Time",
+      "field": "hours",
+      "subfieldPath": [
+        {
+          "name": "tuesday"
+        },
+        {
+          "name": "openIntervals"
+        },
+        {
+          "name": "start"
+        }
+      ],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "Sunday Open Time",
+      "field": "hours",
+      "subfieldPath": [
+        {
+          "name": "sunday"
+        },
+        {
+          "name": "openIntervals"
+        },
+        {
+          "name": "start"
+        }
+      ],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "is_permanently_closed",
+      "field": "closed",
+      "subfieldPath": [],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "address.suite",
+      "field": "address",
+      "subfieldPath": [
+        {
+          "name": "line2"
+        }
+      ],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "Thursday Close Time",
+      "field": "hours",
+      "subfieldPath": [
+        {
+          "name": "thursday"
+        },
+        {
+          "name": "openIntervals"
+        },
+        {
+          "name": "end"
+        }
+      ],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "Wednesday Close Time",
+      "field": "hours",
+      "subfieldPath": [
+        {
+          "name": "wednesday"
+        },
+        {
+          "name": "openIntervals"
+        },
+        {
+          "name": "end"
+        }
+      ],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "Friday Close Time",
+      "field": "hours",
+      "subfieldPath": [
+        {
+          "name": "friday"
+        },
+        {
+          "name": "openIntervals"
+        },
+        {
+          "name": "end"
+        }
+      ],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "urls[].value",
+      "field": "landingPageUrl",
+      "subfieldPath": [],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "services[].name",
+      "field": "services",
+      "subfieldPath": [],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "Phone",
+      "field": "mainPhone",
+      "subfieldPath": [],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "Tuesday Close Time",
+      "field": "hours",
+      "subfieldPath": [
+        {
+          "name": "tuesday"
+        },
+        {
+          "name": "openIntervals"
+        },
+        {
+          "name": "end"
+        }
+      ],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "Monday Open Time",
+      "field": "hours",
+      "subfieldPath": [
+        {
+          "name": "monday"
+        },
+        {
+          "name": "openIntervals"
+        },
+        {
+          "name": "start"
+        }
+      ],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "id",
+      "field": "entityId",
+      "subfieldPath": [],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "Sunday Close Time",
+      "field": "hours",
+      "subfieldPath": [
+        {
+          "name": "sunday"
+        },
+        {
+          "name": "openIntervals"
+        },
+        {
+          "name": "end"
+        }
+      ],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "address.city",
+      "field": "address",
+      "subfieldPath": [
+        {
+          "name": "city"
+        }
+      ],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "hours_of_operation.notes",
+      "field": "additionalHoursText",
+      "subfieldPath": [],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "address.state",
+      "field": "address",
+      "subfieldPath": [
+        {
+          "name": "region"
+        }
+      ],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "Friday Open Time",
+      "field": "hours",
+      "subfieldPath": [
+        {
+          "name": "friday"
+        },
+        {
+          "name": "openIntervals"
+        },
+        {
+          "name": "start"
+        }
+      ],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "address.zip",
+      "field": "address",
+      "subfieldPath": [
+        {
+          "name": "postalCode"
+        }
+      ],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "Wednesday Open Time",
+      "field": "hours",
+      "subfieldPath": [
+        {
+          "name": "wednesday"
+        },
+        {
+          "name": "openIntervals"
+        },
+        {
+          "name": "start"
+        }
+      ],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "Saturday Open Time",
+      "field": "hours",
+      "subfieldPath": [
+        {
+          "name": "saturday"
+        },
+        {
+          "name": "openIntervals"
+        },
+        {
+          "name": "start"
+        }
+      ],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "accepting_new_patients",
+      "field": "acceptingNewPatients",
+      "subfieldPath": [],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "name",
+      "field": "name",
+      "subfieldPath": [],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "insurance_accepted[].name",
+      "field": "insuranceAccepted",
+      "subfieldPath": [],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "Monday Close Time",
+      "field": "hours",
+      "subfieldPath": [
+        {
+          "name": "monday"
+        },
+        {
+          "name": "openIntervals"
+        },
+        {
+          "name": "end"
+        }
+      ],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "Monday isClosed",
+      "field": "hours",
+      "subfieldPath": [
+        {
+          "name": "monday"
+        },
+        {
+          "name": "isClosed"
+        }
+      ],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "Tuesday isClosed",
+      "field": "hours",
+      "subfieldPath": [
+        {
+          "name": "tuesday"
+        },
+        {
+          "name": "isClosed"
+        }
+      ],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "Wednesday isClosed",
+      "field": "hours",
+      "subfieldPath": [
+        {
+          "name": "wednesday"
+        },
+        {
+          "name": "isClosed"
+        }
+      ],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "Thursday isClosed",
+      "field": "hours",
+      "subfieldPath": [
+        {
+          "name": "thursday"
+        },
+        {
+          "name": "isClosed"
+        }
+      ],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "Friday isClosed",
+      "field": "hours",
+      "subfieldPath": [
+        {
+          "name": "friday"
+        },
+        {
+          "name": "isClosed"
+        }
+      ],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "Saturday isClosed",
+      "field": "hours",
+      "subfieldPath": [
+        {
+          "name": "saturday"
+        },
+        {
+          "name": "isClosed"
+        }
+      ],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "Sunday isClosed",
+      "field": "hours",
+      "subfieldPath": [
+        {
+          "name": "sunday"
+        },
+        {
+          "name": "isClosed"
+        }
+      ],
+      "clearValueIfBlank": false
+    }
+  ]
+}
