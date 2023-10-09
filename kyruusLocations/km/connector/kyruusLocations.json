@@ -1,8 +1,8 @@
 {
   "$id": "kyruusLocations_Connector",
-  "$schema": "https://schema.yext.com/config/km/connector/v3",
+  "$schema": "https://schema.yext.com/config/km/connector/v4",
   "displayName": "Kyruus Locations Connector",
-  "entityType": "healthcareFacility",
+  "entityTypes": ["healthcareFacility"],
   "source": {
     "sourceConfig": {
       "functionConfig": {
@@ -925,5 +925,9 @@
       ],
       "clearValueIfBlank": false
     }
-  ]
+  ],
+  "comprehensiveModeConfig": {
+    "comprehensiveSet": "ENTITIES_CREATED_BY_THIS_CONNECTOR",
+    "actionOnMissingEntities": "DELETE"
+  }
 }
