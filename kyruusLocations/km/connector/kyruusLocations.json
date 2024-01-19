@@ -5,16 +5,14 @@
   "entityTypes": ["healthcareFacility"],
   "source": {
     "sourceConfig": {
-      "functionConfig": {
-        "plugin": "kyruusLocations",
-        "function": "fetchLocations",
-        "dataFormat": "JSON"
+      "nativeSourceConfig": {
+        "source": "kyruus",
+        "operation": "fetchLocations",
+        "inputs": {
+          "kyruusLinkedAccount": "${{linkedAccountId}}",
+          "customerName": "${{customerName}}"
+        }
       }
-    },
-    "baseSelector": {
-      "type": "JSON",
-      "header": "Entity Container",
-      "path": "_locations"
     },
     "selectors": [
       {
